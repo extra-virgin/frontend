@@ -1,0 +1,14 @@
+# useless directories
+.idea/
+.git/
+.vscode/
+
+# npm
+node_modules/
+
+# logs
+*.log
+
+# markdown
+README.md
+LICENSE.md
