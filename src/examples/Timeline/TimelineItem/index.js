@@ -29,7 +29,7 @@ import { useTimeline } from "examples/Timeline/context";
 // Custom styles for the TimelineItem
 import timelineItem from "examples/Timeline/TimelineItem/styles";
 
-function TimelineItem({ color, src, title, dateTime, description, lastItem }) {
+function TimelineItem({ color, src, title, dateTime: subtitle, description, lastItem }) {
   const isDark = useTimeline();
 
   return (
@@ -57,7 +57,7 @@ function TimelineItem({ color, src, title, dateTime, description, lastItem }) {
         </MDTypography>
         <MDBox mt={0.5}>
           <MDTypography variant="caption" color={isDark ? "secondary" : "text"}>
-            {dateTime}
+            {subtitle}
           </MDTypography>
         </MDBox>
         <MDBox mt={2} mb={1.5}>
@@ -93,7 +93,7 @@ TimelineItem.propTypes = {
   ]),
   src: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  dateTime: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   description: PropTypes.string,
   lastItem: PropTypes.bool,
 };
