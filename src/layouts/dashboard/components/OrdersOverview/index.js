@@ -62,7 +62,7 @@ function OrdersOverview() {
             color={order.buy ? "warning" : "success"}
             src={`https://invest-brands.cdn-tinkoff.ru/${order.figi}x160.png`}
             title={order.title}
-            dateTime={order.time}
+            dateTime={`${order.time} ${order.buy ? `Покупка -${order.price}` : `Продажа ${order.price}`}`}
             lastItem={index == lastOrders.length - 1}
           />
           })
