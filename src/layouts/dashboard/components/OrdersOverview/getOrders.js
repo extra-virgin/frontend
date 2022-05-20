@@ -1,5 +1,5 @@
-const FIGI_API_ENDPOINT = process.env.FIGI_API_ENDPOINT;//https://api.openfigi.com/v3/mapping or "http://localhost:8010/proxy"; for local
-const ORDERS_ENDPOINT = process.env.ORDERS_ENDPOINT//"https://apimocha.com/stocks-orders/orders";
+const FIGI_API_ENDPOINT = "https://api.openfigi.com/v3/mapping"//process.env.FIGI_API_ENDPOINT;//https://api.openfigi.com/v3/mapping or "http://localhost:8010/proxy"; for local
+const ORDERS_ENDPOINT = "https://apimocha.com/stocks-orders/orders"//process.env.ORDERS_ENDPOINT//"https://apimocha.com/stocks-orders/orders";
 
 const getOrders = async () => {	
 	return new Promise((resolve, reject) => {
