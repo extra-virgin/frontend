@@ -18,7 +18,7 @@ import PropTypes from "prop-types";
 
 // @mui material components
 import Icon from "@mui/material/Icon";
-
+import Avatar from '@mui/material/Avatar';
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
@@ -29,7 +29,7 @@ import { useTimeline } from "examples/Timeline/context";
 // Custom styles for the TimelineItem
 import timelineItem from "examples/Timeline/TimelineItem/styles";
 
-function TimelineItem({ color, icon, title, dateTime, description, lastItem }) {
+function TimelineItem({ color, src, title, dateTime: subtitle, description, lastItem }) {
   const isDark = useTimeline();
 
   return (
@@ -49,7 +49,7 @@ function TimelineItem({ color, icon, title, dateTime, description, lastItem }) {
         zIndex={2}
         sx={{ fontSize: ({ typography: { size } }) => size.sm }}
       >
-        <Icon fontSize="inherit">{icon}</Icon>
+        <Avatar src={src}/>
       </MDBox>
       <MDBox ml={5.75} pt={description ? 0.7 : 0.5} lineHeight={0} maxWidth="30rem">
         <MDTypography variant="button" fontWeight="medium" color={isDark ? "white" : "dark"}>
@@ -57,7 +57,7 @@ function TimelineItem({ color, icon, title, dateTime, description, lastItem }) {
         </MDTypography>
         <MDBox mt={0.5}>
           <MDTypography variant="caption" color={isDark ? "secondary" : "text"}>
-            {dateTime}
+            {subtitle}
           </MDTypography>
         </MDBox>
         <MDBox mt={2} mb={1.5}>
@@ -91,9 +91,9 @@ TimelineItem.propTypes = {
     "dark",
     "light",
   ]),
-  icon: PropTypes.node.isRequired,
+  src: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
-  dateTime: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   description: PropTypes.string,
   lastItem: PropTypes.bool,
 };

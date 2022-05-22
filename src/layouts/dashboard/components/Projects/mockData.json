@@ -1,0 +1,12 @@
+[{
+	"figi":"US9598021098",
+	"status": "WORKING",
+	"budget": "8000$",
+	"completion": 100
+},
+{
+	"figi":"RU000A0J2Q06",
+	"status": "DONE",
+	"budget": "9000$",
+	"completion": 30
+}]
