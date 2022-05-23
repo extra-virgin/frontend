@@ -36,7 +36,7 @@ function Basic() {
 
         </MDBox>
         <MDBox pt={4} pb={3} px={3}>
-          <MDBox component="form" role="form">
+          <MDBox>
             <MDBox mb={2}>
               <MDInput
                 type="password"
